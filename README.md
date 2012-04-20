@@ -11,3 +11,9 @@ Installation:
 * Cronjob anlegen der alle x (5 ist gut) Minuten foobot.sh startet
 * Den Webserver auf htdocs zeigen lassen
 * eventuell Rechte anpassen
+
+Bedienmöglichkeiten:
+
+* Mit dem Browser ansurfen
+* status.png auf anderen Webseiten einbinden
+* in eigenen Skripten die api abfragen, liefert open, closed oder error
