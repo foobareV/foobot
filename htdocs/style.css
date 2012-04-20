@@ -1,0 +1,29 @@
+body {
+	margin-left: 20px;
+	margin-right: 20px;
+	width: auto;
+	font-size: 15px;
+	line-height: 22px;
+	font-family: sans-serif;
+}
+
+h1 {
+	margin: 15px auto;
+	font-size: 24px;
+}
+
+img {
+	display: block;
+	margin: 0 0 0 70px;
+	width: auto;
+	height: auto;
+}
+
+p {
+	text-align: justify;
+}
+
+em {
+	font-style: italic;
+	font-weight: bold;
+}
