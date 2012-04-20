@@ -1,7 +1,7 @@
 #!/bin/bash
 # foobot - Der Statusbot der foobar
 
-cd /var/www/status.die-foobar.org
+cd $BOTDIR
 
 source config.cfg
 LASTSTATUS=`cat laststatus`
