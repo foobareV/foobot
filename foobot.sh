@@ -16,7 +16,7 @@ case $FOOBAR_STATUS in
 		rm htdocs/status.png 2> /dev/null;
 		ln -s open.png htdocs/status.png;
 		echo "open" > htdocs/api;
-		sed -e "s/{space}/${SPACE}/" -e "s/{status_img}/open/" -e "s/{status}/offen/" -e "s/{datetime}/${DATETIME}/" -e "s/{phone}/<p>Wie lange ist noch jemand da\?<br \/>Ruf an: ${PHONE}<\/p>/" template.html > htdocs/index.html;
+		sed -e "s/{space}/${SPACE}/g" -e "s/{status_img}/open/g" -e "s/{status}/offen/g" -e "s/{datetime}/${DATETIME}/g" -e "s/{phone}/<p>Wie lange ist noch jemand da\?<br \/>Ruf an: ${PHONE}<\/p>/g" template.html > htdocs/index.html;
 		echo "0" > laststatus;
 	fi
 	;;
@@ -25,7 +25,7 @@ case $FOOBAR_STATUS in
 		rm htdocs/status.png 2> /dev/null;
 		ln -s closed.png htdocs/status.png;
 		echo "closed" > htdocs/api;
-		sed -e "s/{space}/${SPACE}/" -e "s/{status_img}/closed/" -e "s/{status}/geschlossen/" -e "s/{datetime}/${DATETIME}/" -e "s/{phone}//" template.html > htdocs/index.html;
+		sed -e "s/{space}/${SPACE}/g" -e "s/{status_img}/closed/g" -e "s/{status}/geschlossen/g" -e "s/{datetime}/${DATETIME}/g" -e "s/{phone}//g" template.html > htdocs/index.html;
 		echo "1" > laststatus;
 	fi
 	;;
@@ -33,7 +33,7 @@ case $FOOBAR_STATUS in
 	rm htdocs/status.png 2> /dev/null;
 	ln -s error.png htdocs/status.png;
 	echo "error" > htdocs/api;
-	sed -e "s/{space}/${SPACE}/" -e "s/{status_img}/error/" -e "s/{status}/Fehler/" -e "s/{datetime}/${DATETIME}/" -e "s/{phone}//" template.html > htdocs/index.html;
+	sed -e "s/{space}/${SPACE}/g" -e "s/{status_img}/error/g" -e "s/{status}/Fehler/g" -e "s/{datetime}/${DATETIME}/g" -e "s/{phone}//g" template.html > htdocs/index.html;
 	echo "5" > laststatus;
 	;;
 esac
